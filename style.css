@@ -1,0 +1,231 @@
+html, body {
+    background: #fff;
+    color: #222;
+    margin: 0; /* 余白の削除 */
+    padding: 0; /* 余白の削除 */ 
+  
+  /* ↑html,bodyタグの子要素が画面の表示領域を全て使用できるようにする */
+    height: 100%; /* 縦の高さを100% */
+    width: 100%; /* 横の高さを100% */
+    
+    font-family: arial, sans-serif;
+  }
+  
+  #body {
+    position: relative; /* フッター部の配置用に定義 */
+    
+  /* スクロールが発生しないような内容の少ない画面でも一番下まで div#main の領域とする */
+    min-height: 100%; /* 縦の表示領域を100% */
+  }
+  
+  #space {
+    position: relative;
+    height: 16px;
+    width: 100%;
+  }
+
+  /* ヘッダー */
+  #header {
+    height: 31px;  /* （縦の高さ47px）−（#spaceの高さ） */
+    width: 100%;  /* 横の幅を100% */
+    display: flex;
+    justify-content: space-between;  /* 子要素を両側に配置（flexのプロパティ） */
+    align-items: center; /* 子要素を上下中央に配置（flexのプロパティ） */
+  }
+  
+  #header_left {
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  #header_right {
+    position: relative;
+    min-width: 165px;
+    padding-right: 30px;
+  }
+  
+  .header_link {
+    font-size: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 15px;
+    color: #000;
+    opacity: 0.75;
+    cursor: pointer;
+  }
+
+  #header_apps {
+    position: relative;
+    display: inline-block;
+  }
+
+  #header_apps_image {
+    display: inline-block;
+    background-image: url(//ssl.gstatic.com/gb/images/i1_1967ca6a.png);
+    background-size: 528px 68px;
+    background-position: -132px -38px;
+    opacity: .55;
+    outline: none;
+    vertical-align: middle;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  #header_apps a:hover {
+    opacity: .85;
+  }
+
+  #header_link_login {
+    font-size: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 15px;
+    color: #000;
+  }
+  
+  .header_link a:hover {
+    opacity: .85;
+    text-decoration: underline;
+  }
+  
+  #header_login {
+    display: inline-block;　/* aタグのデフォルトプロパティはinline（幅・高さを指定できない）ので、inline-block（幅・高さを指定できる）に変更 */
+    border: 1px solid #4285f4;
+    background: #4285f4;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    line-height: 28px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background: linear-gradient(top,#4387fd,#4683ea);
+  }
+
+  
+  /* メイン */
+  #main {
+    padding-bottom: 81px;   /* 子要素の下にフッターの高さの分余白を取る */
+    text-align: center;
+  }
+  
+  #google_logo {
+    padding-top: 150px;
+    padding-bottom: 20px;
+  }
+
+   /* divで検索ボックスの枠を作る */
+  #searchbox {
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 18px;  /* 上　左右　下 */
+    box-shadow: none;
+    border-radius: 24px;
+    height: 44px;
+    width: 582px;
+  }
+  
+  #searchbox:hover {
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+      border-color: rgba(223, 225, 229, 0);
+  }
+  
+   /* インプットするところ */
+  #searchbox input{
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    height: 34px;
+    font-size: 16px;
+  }
+  
+  /* サーチアイコン */
+  #icon1 {
+    position: relative;
+    height: 24px;
+    width: 24px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  
+  #icon2 {
+    position: relative;
+    height: 24px;
+    width: 24px;
+    padding-right: 13px;
+  }
+  
+  #button {
+      background: linear-gradient(top, #f5f5f5, #f1f1f1);
+      background-color: #f8f8f8;
+      border: 1px solid #f2f2f2;
+      border-radius: 4px;
+      color: #5F6368;
+      font-size: 14px;
+      margin: 11px 4px;
+      padding: 0 16px;
+      line-height: 27px;
+      height: 36px;
+      min-width: 54px;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+  }
+  
+  #button:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    color: #222;
+  }
+      
+  #footer {
+    width: 100%;               /* 横の幅を100% */
+    height: 81px;            /* 縦の幅を81px */
+    position: absolute;       /* 絶対位置指定することを定義 */
+    bottom: 0px;              /* 絶対位置指定(左0px,下0px) */
+    line-height: 40px;
+    min-width: 980px;
+    background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    font-size: 15px;
+    color: rgba(0, 0, 0, .54);
+  }
+
+  #footer_bottom_row {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e4e4e4;
+  }
+
+  #footer_bottom_right {
+    margin-right: 30px;
+  }
+
+  .footer_link {
+    padding-left: 27px;
+  }
+
+  #footer_top {
+    padding-left: 27px;  
+  }
+
+  .footer_link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
